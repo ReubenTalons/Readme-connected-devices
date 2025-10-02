@@ -31,6 +31,7 @@ URL: https://github.com/\[your-username]/piot-python-components/tree/labmodule03
 (Note: Include your UML class diagrams showing the relationships between DeviceDataManager, SensorAdapterManager, ActuatorAdapterManager, and the simulation tasks. The diagrams should show the IDataMessageListener callback pattern and the inheritance hierarchies for BaseSensorSimTask and BaseActuatorSimTask.)
 
 
+<img width="3241" height="1611" alt="UML_ LabModule03_CDA" src="https://github.com/user-attachments/assets/5493301d-8388-4da6-bc45-b1bd60718e94" />
 
 ### Unit Tests Executed
 
@@ -105,4 +106,5 @@ Application Integration Tests:
 test\_DeviceDataManagerNoComms
 
 test\_ConstrainedDeviceApp
+
 
