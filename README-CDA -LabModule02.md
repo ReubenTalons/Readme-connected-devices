@@ -9,7 +9,7 @@ Be sure to implement all the PIOT-CDA-\* issues (requirements) listed at [PIOT-I
 
 ### Description
 
-<img width="1805" height="1535" alt="UML-CDA-LabModule02" src="https://github.com/user-attachments/assets/27c819f0-6cdb-4668-b0e4-2bda3ebb9890" />
+
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
@@ -29,6 +29,9 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
+
+
+<img width="1805" height="1535" alt="UML-CDA-LabModule02" src="https://github.com/user-attachments/assets/1d4e9e27-c5dc-4339-8920-150253ac6639" />
 
 
 ### Unit Tests Executed
