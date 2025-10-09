@@ -25,6 +25,7 @@ The implementation leverages a configuration-driven architecture where PiotConfi
 ### 
 
 ### UML diagram for LabModule04
+<img width="1024" height="1536" alt="UML_LabModule04" src="https://github.com/user-attachments/assets/81fe052c-3294-40cc-9235-da2670903f68" />
 
 
 
