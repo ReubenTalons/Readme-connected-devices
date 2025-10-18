@@ -1,84 +1,68 @@
-# Constrained Device Application (Connected Devices)
-
-## Lab Module 04
-
+Constrained Device Application (Connected Devices)
+Lab Module 05
 
 
-### Description
+Description
 
-Lab Module 04 implements a comprehensive data emulation framework for IoT sensor and actuator management using the Sense HAT emulator. The solution enables dynamic generation of time-series environmental sensor data (temperature, humidity, and pressure) and supports emulated actuation through LED display control. The system is designed with flexibility in mind, supporting three operational modes: simulator (generated data), emulator (Sense HAT GUI), and hardware (physical I2C sensors on Raspberry Pi). The ActuatorAdapterManager dynamically routes actuator commands to the appropriate emulator tasks (Humidifier, HVAC, LED Display), which display visual feedback on the Sense HAT's 8x8 LED matrix by scrolling text messages like "HUMIDIFIER ON: 50.0C". The SensorAdapterManager uses a background scheduler to poll sensors at configurable intervals (default 5 seconds), collecting environmental telemetry data and distributing it throughout the system to registered listeners for processing, storage, or cloud transmission
-
-
+Lab Module 05 focuses on implementing local data persistence and JSON data conversion capabilities for the Constrained Device Application (CDA). This module introduces integration with time-series databases (InfluxDB) and key-value stores (Redis) to enable data storage, retrieval, and message passing between the CDA and Gateway Device Application (GDA). The lab implements JSON serialization/deserialization utilities using Python's json library to facilitate seamless data exchange. Additionally, the SystemPerformanceManager is updated to create SystemPerformanceData instances and integrate callback listeners for data message handling. Key objectives include installing and configuring InfluxDB with four data buckets, securing Redis with password authentication, implementing bidirectional JSON conversions for ActuatorData, SensorData, and SystemPerformanceData, and validating all implementations through comprehensive unit and integration testing. This module establishes the foundation for data persistence and cross-application communication in the IoT system.RetryClaude can make mistakes. Please double-check responses. Sonnet 4.5
 
 
-
-What does your implementation do?
-
-This implementation creates a complete IoT data emulation system that simulates environmental sensors and actuators using the Sense HAT emulator. The system collects real-time sensor data for temperature, humidity, and pressure, then displays this information and actuator commands visually on an 8x8 LED matrix display. It provides three flexible operational modes: a simulator mode that generates synthetic data for testing without hardware, an emulator mode that uses the Sense HAT GUI for development on standard computers, and a hardware mode that communicates directly with physical sensors via I2C on a Raspberry Pi.
+Code Repository and Branch
+URL: https://github.com/ReubenComla/cda-python-components/tree/labmodule05
 
 
+UML Design Diagram
 
-How does your implementation work?
-
-The implementation leverages a configuration-driven architecture where PiotConfig.props determines which sensor and actuator tasks to load at runtime through three boolean flags: enableEmulator (Sense HAT GUI), enableSenseHAT (physical I2C hardware), and enableSimulator (generated data). When the SensorAdapterManager initializes, it reads these configuration flags using ConfigUtil and calls \_initEnvironmentalSensorTasks(), which uses Python's import\_module() function to dynamically load the appropriate sensor task classes without hardcoding dependencies.
-
-### 
-
-### UML diagram for LabModule04
+<img width="1536" height="1024" alt="UML_CDA_LAB_Module05" src="https://github.com/user-attachments/assets/24773e81-0ad4-4e27-8b14-8f03b1fb79c9" />
 
 
+Unit Tests Executed
+test_DataUtil.py
 
-### 
-
-### Code Repository and Branch
-
-https://github.com/ReubenComla/cda-python-components
-
-Branch - https://github.com/ReubenComla/cda-python-components/tree/labmodule03
-
-
-
-### Unit Tests Executed
+testActuatorDataConversionsFromJson - PASSED 
+testActuatorDataConversionsFromObject - PASSED 
+testSensorDataConversionsFromJson - PASSED 
+testSensorDataConversionsFromObject - PASSED 
+testSystemPerformanceConversionsFromJson - PASSED 
+testSystemPerformanceDataConversionsFromObject - PASSED 
+Summary: 6/6 tests passed in 0.022s 
 
 
+Integration Tests:
+test_SystemPerformanceManager.py
 
-\* HumiditySensorEmulatorTaskTest
+SystemPerformanceManager integration test - PASSED 
+Duration: 60.023 seconds
+Collected CPU utilization (0% - 43%)
+Collected memory utilization (54.6% - 54.8%)
+Created SystemPerformanceData objects every 5 seconds
+Invoked callback listener 12 times successfully
 
-\* PressureSensorEmulatorTaskTest
+test_DataIntegration.py
 
-\* TemperatureSensorEmulatorTaskTest
+testReadActuatorDataFromGdaDataPath - PASSED 
+testReadSensorDataFromGdaDataPath - PASSED 
+testReadSystemPerformanceDataFromGdaDataPath - PASSED 
+testWriteActuatorDataToCdaDataPath - PASSED 
+testWriteSensorDataToCdaDataPath - PASSED 
+testWriteSystemPerformanceDataToCdaDataPath - PASSED 
+Summary: 6/6 tests passed in 0.031s 
 
-\* HumidifierEmulatorTaskTest
 
-\* HvacEmulatorTaskTest
-
-\* LedDisplayEmulatorTaskTest
+Infrastructure Tests:
 
 
+InfluxDB Connection Test
 
-### Integration Tests Executed
+Successfully connected to InfluxDB at localhost:8086 
+Wrote test temperature data (22.5°C from room1/sensor01) 
+Retrieved and verified stored data 
 
-\* test\_SenseHatEmulatorQuick
+Redis Connection Test
 
-\* test\_HumidityEmulatorTask
-
-\* test\_PressureEmulatorTask
-
-\* test\_TemperatureEmulatorTask
-
-\* test\_HumidifierEmulatorTask
-
-\* test\_HvacEmulatorTask
-
-\* test\_LedDisplayEmulatorTask
-
-\* test\_ActuatorEmulatorManager
-
-\* test\_SensorEmulatorManager
-
-\* test\_EmbeddedSensorAdapter
-
-\* SystemPerformanceManagerTest
-
-\* DeviceDataManagerNoCommsTest
-
+Successfully connected to Redis at localhost:6379 
+Authenticated with password successfully 
+Stored sensor data with 1-hour expiration 
+Retrieved data successfully 
+Verified Redis server info (version 7.0.15) 
+RetryClaude can make mistakes. Please double-check responses. Sonnet 4.5
