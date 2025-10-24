@@ -13,7 +13,8 @@ URL: https://github.com/ReubenComla/cda-python-components/tree/labmodule05
 
 UML Design Diagram
 
-<img width="1536" height="1024" alt="UML_CDA_LAB_Module05" src="https://github.com/user-attachments/assets/24773e81-0ad4-4e27-8b14-8f03b1fb79c9" />
+
+<img width="2050" height="1247" alt="UML_CDA_LAB_Module05" src="https://github.com/user-attachments/assets/cb3cefe9-e409-4c6c-a826-4c329e6e22b1" />
 
 
 Unit Tests Executed
