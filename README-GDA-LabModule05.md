@@ -11,8 +11,9 @@ Lab Module 05 focuses on implementing local data persistence and JSON data conve
 
 UML diagram for LabModule05
 
-<img width="1024" height="1024" alt="UML_GDA_LabModule05" src="https://github.com/user-attachments/assets/9d37655b-a199-4b18-bd67-afda21f8a4a6" />
 
+
+<img width="1024" height="1024" alt="UML_GDA_LABModule05" src="https://github.com/user-attachments/assets/69013936-4178-4085-a70f-5682a4a1db75" />
 
 
 Code Repository and Branch
