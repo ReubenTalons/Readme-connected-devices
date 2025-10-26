@@ -20,7 +20,10 @@ Lab Module 07 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 
 
-### UML diagram for LabModule05
+### UML diagram for LabModule07
+
+<img width="2237" height="1682" alt="GDA_UML_LABMODULE07" src="https://github.com/user-attachments/assets/899b7b8f-9bbd-427b-be61-9bb758a6ebdc" />
+
 
 
 
@@ -28,10 +31,9 @@ Lab Module 07 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 ### Code Repository and Branch
 
-https://github.com/ReubenComla/da-python-components
+https:https://github.com/ReubenComla/gda-java-components
 
-Branch - https://github.com/ReubenComla/cda-python-components/tree/labmodule05Unit Tests Executed
-
+Branch - https://github.com/ReubenComla/gda-java-components/tree/Labmodule07
 ....
 
 
