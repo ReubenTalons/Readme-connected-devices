@@ -18,6 +18,9 @@ Lab Module 06 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 ### Code Repository and Branch
 
+URL: https://github.com/ReubenComla/cda-python-components
+Branch: https://github.com/ReubenComla/cda-python-components/tree/LabModule06
+
 ### 
 
 
@@ -28,6 +31,7 @@ Lab Module 06 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 
 
+<img width="1547" height="1687" alt="UML_CDA_LAB_Module06" src="https://github.com/user-attachments/assets/c0770707-85c2-4c48-812d-d8e11fe5c56f" />
 
 
 
@@ -37,12 +41,6 @@ Lab Module 06 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 
 ### Tests Executed
-
-
-
-
-
-
 
 
 
@@ -96,6 +94,7 @@ Validated onConnect() callback execution
 Validated onDisconnect() callback execution
 
 Result: ✅ PASS (65.120s)
+
 
 
 
