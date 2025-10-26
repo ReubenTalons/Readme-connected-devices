@@ -1,6 +1,6 @@
 # Constrained Device Application (Connected Devices)
 
-## Lab Module 05
+## Lab Module 07
 
 
 
@@ -8,7 +8,7 @@
 
 
 
-Lab Module 05 focuses on implementing local data persistence and JSON data conversion capabilities for the Constrained Device Application (CDA). This module introduces integration with time-series databases (InfluxDB) and key-value stores (Redis) to enable data storage and retrieval. Additionally, the module implements JSON serialization/deserialization utilities to facilitate data exchange between the CDA and Gateway Device Application (GDA).
+Lab Module 07 focused on implementing MQTT (Message Queuing Telemetry Transport) client connectivity for the Gateway Device Application (GDA) using Java. This module involved creating a robust MQTT client connector using the Eclipse Paho Java library, implementing publish/subscribe messaging capabilities, adding comprehensive event callbacks for connection lifecycle management, and integrating the MQTT client into the DeviceDataManager for seamless IoT gateway operations. The implementation included connection management with automatic reconnection, topic-based message routing, quality of service (QoS) level handling, and proper resource cleanup. All components were tested using JUnit integration tests to validate connection stability, message delivery, and callback execution. The MQTT client connector was designed to work with the synchronous MqttClient for reliable blocking operations during testing and initial deployment. This lab established the foundation for bi-directional communication between the Gateway Device Application and Constrained Device Applications through a Mosquitto MQTT broker running on localhost:1883.
 
 
 
@@ -38,29 +38,29 @@ Branch - https://github.com/ReubenComla/cda-python-components/tree/labmodule05Un
 
 
 
-### Unit Tests Executed
-
-test\_DataUtil.py
+### Connection Tests Executed
 
 
 
-testActuatorDataConversionsFromJson - PASSED ✅
-
-testActuatorDataConversionsFromObject - PASSED ✅
-
-testSensorDataConversionsFromJson - PASSED ✅
-
-testSensorDataConversionsFromObject - PASSED ✅
-
-testSystemPerformanceConversionsFromJson - PASSED ✅
-
-testSystemPerformanceDataConversionsFromObject - PASSED ✅
 
 
 
-Summary: Ran 6 tests in 0.022s - ALL PASSED ✅
 
+Verified MQTT client connection to broker (tcp://localhost:1883)
 
+Validated generated client ID assignment
+
+Tested connection attempt when already connected (expected warning)
+
+Maintained connection for keepAlive period (65 seconds)
+
+Verified clean disconnection from broker
+
+Tested disconnection attempt when already disconnected (expected warning)
+
+Validated connectComplete() callback execution
+
+Result: ✅ PASS (~70 seconds)
 
 
 
@@ -72,33 +72,27 @@ Summary: Ran 6 tests in 0.022s - ALL PASSED ✅
 
 ### Integration Tests Executed
 
-test\_SystemPerformanceManager.py
+
+
+GDA Application Integration Test 
 
 
 
-Integration test for SystemPerformanceManager - PASSED ✅
+Launched full GatewayDeviceApp application
 
-Duration: 60.023 seconds
+Verified MQTT client initialization in DeviceDataManager
 
+Validated automatic MQTT connection on startManager()
 
+Confirmed subscription to 4 topics (GDA and CDA message resources)
 
-test\_DataIntegration.py
+Monitored MQTT connection stability during 65-second runtime
 
+Verified automatic unsubscribe on stopManager()
 
+Confirmed clean MQTT disconnection on application shutdown
 
-testReadActuatorDataFromGdaDataPath - PASSED ✅
+Validated exit code 0 (clean shutdown)
 
-testReadSensorDataFromGdaDataPath - PASSED ✅
-
-testReadSystemPerformanceDataFromGdaDataPath - PASSED ✅
-
-testWriteActuatorDataToCdaDataPath - PASSED ✅
-
-testWriteSensorDataToCdaDataPath - PASSED ✅
-
-testWriteSystemPerformanceDataToCdaDataPath - PASSED ✅
-
-
-
-Summary: Ran 6 tests in 0.031s - ALL PASSED ✅
+Result: ✅ PASS (65 seconds runtime)
 
