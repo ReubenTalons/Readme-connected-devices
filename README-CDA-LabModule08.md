@@ -9,12 +9,14 @@ Lab Module 08 focused on implementing CoAP (Constrained Application Protocol) se
 
 Code Repository and Branch
 
-URL: https://github.com/ReubenComla/Readme-connected-devices/blob/main/README-CDA-LabModule08.md
+URL:https://github.com/ReubenComla/cda-python-components
 
 Branch: https://github.com/ReubenComla/cda-python-components/tree/labmodule08
 
 UML Design Diagram(s)
-<img width="1024" height="1024" alt="GDA-UML-LabModule08" src="https://github.com/user-attachments/assets/eb25f26a-2edf-46cc-ac99-ae0056774e05" />
+
+
+<img width="3067" height="1757" alt="CDA-UML-LABMODULE08" src="https://github.com/user-attachments/assets/96efa588-59c7-45ab-a12b-af517c086a73" />
 
 
 
@@ -60,7 +62,7 @@ testServerStartupAndResourceDiscovery()
 
 Successfully discovered all 4 registered resources
 Response time: 75ms
-Result: ✅ PASS
+Result: PASS
 
 Configuration Tests
 
@@ -85,4 +87,5 @@ test_initServer()
 ⦁	Confirmed setSystemPerformanceDataListener() callback registration
 ⦁	Verified "Created CoAP server with default resources" log message
 Result: PASS
+
 
