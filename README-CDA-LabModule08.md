@@ -85,3 +85,4 @@ test_initServer()
 ⦁	Confirmed setSystemPerformanceDataListener() callback registration
 ⦁	Verified "Created CoAP server with default resources" log message
 Result: PASS
+
