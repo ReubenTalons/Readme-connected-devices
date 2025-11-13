@@ -1,26 +1,19 @@
 # Constrained Device Application (Connected Devices)
 
-## Lab Module 07
+## Lab Module 08
 
 
 
 ### Description
 
 
-
-Lab Module 07 focused on implementing MQTT (Message Queuing Telemetry Transport) client connectivity for the Gateway Device Application (GDA) using Java. This module involved creating a robust MQTT client connector using the Eclipse Paho Java library, implementing publish/subscribe messaging capabilities, adding comprehensive event callbacks for connection lifecycle management, and integrating the MQTT client into the DeviceDataManager for seamless IoT gateway operations. The implementation included connection management with automatic reconnection, topic-based message routing, quality of service (QoS) level handling, and proper resource cleanup. All components were tested using JUnit integration tests to validate connection stability, message delivery, and callback execution. The MQTT client connector was designed to work with the synchronous MqttClient for reliable blocking operations during testing and initial deployment. This lab established the foundation for bi-directional communication between the Gateway Device Application and Constrained Device Applications through a Mosquitto MQTT broker running on localhost:1883.
-
-
-
-
-
-
-
+Applications, implementing resource handlers for processing PUT requests (system performance and sensor data), creating an observable resource handler for actuator commands using the CoAP OBSERVE specification, and integrating the CoAP server into the DeviceDataManager for seamless IoT gateway operations. The implementation included resource tree management with hierarchical URI path structures, message acceptance and response code handling, JSON payload conversion using DataUtil, and proper server lifecycle management with MessageTracer interceptors for debugging. All components were successfully compiled and integrated with the DeviceDataManager to enable bi-directional communication between the Gateway Device Application and Constrained Device Applications through the CoAP protocol running on localhost:5683.
 
 
 
 
 ### UML diagram for LabModule05
+<img width="1024" height="1024" alt="GDA-UML-LabModule08" src="https://github.com/user-attachments/assets/f9140d9e-d830-4760-9a0c-1a1b45610397" />
 
 
 
@@ -28,71 +21,66 @@ Lab Module 07 focused on implementing MQTT (Message Queuing Telemetry Transport)
 
 ### Code Repository and Branch
 
-https://github.com/ReubenComla/da-python-components
+URL : https://github.com/ReubenComla/gda-java-components
 
-Branch - https://github.com/ReubenComla/cda-python-components/tree/labmodule05Unit Tests Executed
+
+Branch -https://github.com/ReubenComla/gda-java-components/tree/labmodule08
 
 ....
 
 
 
+Reource Handler test
 
+Resource Handler Tests
+testUpdateSystemPerformanceResourceHandler()
 
-### Connection Tests Executed
+Created UpdateSystemPerformanceResourceHandler instance
+Verified CoapResource extension
+Validated setDataMessageListener() method
+Tested handlePUT() with valid JSON payload
+Confirmed SystemPerformanceData deserialization from JSON
+Verified handleSystemPerformanceMessage() callback invocation
+Validated ResponseCode.CHANGED for successful PUT requests
+Tested ResponseCode.BAD_REQUEST for invalid payloads
+Confirmed ResponseCode.NOT_ACCEPTABLE when no listener set
+Tested basic GET, POST, DELETE implementations
+Result:  PASS
 
+Integration Tests Executed
 
-
-
-
-
-
-Verified MQTT client connection to broker (tcp://localhost:1883)
-
-Validated generated client ID assignment
-
-Tested connection attempt when already connected (expected warning)
-
-Maintained connection for keepAlive period (65 seconds)
-
-Verified clean disconnection from broker
-
-Tested disconnection attempt when already disconnected (expected warning)
-
-Validated connectComplete() callback execution
-
-Result: ✅ PASS (~70 seconds)
-
-
-
-
-
-
-
-
-
-### Integration Tests Executed
-
-
-
-GDA Application Integration Test 
-
-
+GDA Application Integration Test - CoAP Server
 
 Launched full GatewayDeviceApp application
+Verified CoapServerGateway initialization in DeviceDataManager
+Validated CoAP server startup on startManager()
+Confirmed resource handler registration (3 resources)
+Monitored CoAP server stability during runtime
+Verified server responds to discovery requests
+Validated graceful server shutdown on stopManager()
+Confirmed clean application exit with code 0
+Result: PASS
 
-Verified MQTT client initialization in DeviceDataManager
+Configuration Tests
+testConfigurationLoading()
 
-Validated automatic MQTT connection on startManager()
+Verified PiotConfig.props loaded successfully
+Confirmed [Coap.GatewayService] section parsing
+Validated host property: localhost
+Confirmed port property: 5683
+Tested securePort property: 5684
+Verified enableCoapServer: True in [GatewayDevice] section
+Validated enableConfirmedMsgs configuration
+Result: PASS
 
-Confirmed subscription to 4 topics (GDA and CDA message resources)
 
-Monitored MQTT connection stability during 65-second runtime
 
-Verified automatic unsubscribe on stopManager()
 
-Confirmed clean MQTT disconnection on application shutdown
 
-Validated exit code 0 (clean shutdown)
 
-Result: ✅ PASS (65 seconds runtime)
+
+
+
+
+
 
