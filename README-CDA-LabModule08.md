@@ -89,3 +89,12 @@ test_initServer()
 Result: PASS
 
 
+
+Main
+CDA
+1.	coapServerTest
+piot-python-components/src/test/python/programmingtheiot/part03/integration/connection/
+test_CoapServerAdapter.py
+
+
+
