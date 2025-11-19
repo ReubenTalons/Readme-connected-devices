@@ -75,7 +75,12 @@ Result: PASS
 
 
 
+Main
 
+GDA
+
+1.	src/main/test/java/programmingtheiot/gda/connection/
+CoapServerGatewayTest.java
 
 
 
