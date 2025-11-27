@@ -24,6 +24,13 @@ Applications implementing CoAP client functionality for communicating with Const
 
 
 
+
+<img width="1310" height="1410" alt="UML-GDA" src="https://github.com/user-attachments/assets/dcae9f6e-b048-422f-8440-fddabf80f001" />
+
+
+
+
+
 ### 
 
 ### Code Repository and Branch
