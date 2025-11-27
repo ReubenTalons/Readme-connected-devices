@@ -31,6 +31,13 @@ Lab Module 09 focused on implementing CoAP (Constrained Application Protocol) cl
 ### UML Design Diagram(s)
 
 
+<img width="1536" height="1024" alt="CDA-LAB09" src="https://github.com/user-attachments/assets/7f9e7f1a-ec21-4b8a-8145-eb480f17d6c7" />
+
+
+
+
+
+
 
 
 
@@ -211,4 +218,5 @@ Verified enableCoapClient: True in \[ConstrainedDevice] section
 
 
 Result: ✅ PASS
+
 
