@@ -24,6 +24,7 @@ Lab Module 10 focused on implementing performance benchmarking, security enhance
 
 ### UML diagram for LabModule09
 
+<img width="2090" height="1562" alt="GDA-UML-DIAGRAM" src="https://github.com/user-attachments/assets/d6270f30-4a5b-4e1c-a7e8-3473dfd19184" />
 
 
 ### 
