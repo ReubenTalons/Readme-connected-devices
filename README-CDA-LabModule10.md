@@ -20,13 +20,16 @@ Lab Module 10 focused on implementing advanced MQTT and CoAP protocol features f
 
 
 
-##### URL: https://github.com/ReubenComla/cda-python-componentsBranch: https://github.com/ReubenComla/cda-python-components/tree/labmodule10
+##### URL: https://github.com/ReubenComla/cda-python-componentsBranch: 
+
+https://github.com/ReubenComla/cda-python-components/tree/labmodule10
 
 
 
 ### UML Design Diagram(s)
 
 
+<img width="2307" height="1207" alt="CDA-UML-DIAGRAM" src="https://github.com/user-attachments/assets/7ffcfd6c-dccf-4d4d-9944-e23b84aef298" />
 
 
 
@@ -289,4 +292,5 @@ Result: PASS
 
 
 ### 
+
 
