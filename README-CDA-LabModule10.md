@@ -1,6 +1,6 @@
 # Constrained Device Application (Connected Devices)
 
-## Lab Module 09
+## Lab Module 10
 
 
 
@@ -292,5 +292,6 @@ Result: PASS
 
 
 ### 
+
 
 
