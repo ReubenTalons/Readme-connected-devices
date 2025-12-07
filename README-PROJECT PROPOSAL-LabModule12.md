@@ -68,9 +68,9 @@ As a cybersecurity professional and Graduate Teaching Assistant for Cybersecure 
 
 #### Technology Stack
 
-......................................
 
-.....................................
+<img width="1720" height="955" alt="Tech Stack" src="https://github.com/user-attachments/assets/58eaf5f0-5f76-42b2-b814-5b136d0608b8" />
+
 
 
 
@@ -284,9 +284,8 @@ Key Result: Protocol choice matters! Use QoS 0/CoAP NON for frequent updates, Qo
 
 
 
-..................................................
+<img width="1725" height="692" alt="Quantifiable Results" src="https://github.com/user-attachments/assets/f14a7ec1-0192-4eb4-ae81-db43a238a6c4" />
 
-..........................................................
 
 
 
@@ -330,9 +329,8 @@ Key Result: Protocol choice matters! Use QoS 0/CoAP NON for frequent updates, Qo
 
 
 
-.............................
+<img width="1745" height="677" alt="Demo Timeline" src="https://github.com/user-attachments/assets/0fa7bd57-cfa4-4d15-a22a-876ee8172b47" />
 
-..........................................
 
 
 
