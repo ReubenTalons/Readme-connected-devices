@@ -55,14 +55,25 @@ As a cybersecurity professional and Graduate Teaching Assistant for Cybersecure 
 #### System Architecture
 
 
+SEQUENCE DIAGRAM - REACTIVE CONTROL
+
+<img width="2675" height="1195" alt="Sequence Diagram - Reactive Control Flow" src="https://github.com/user-attachments/assets/b8da1829-114b-4efb-b651-fdc57337d515" />
 
 
 
 
 
-..........................................
+CDA -UML DIAGRAM
 
-.........................................
+<img width="2575" height="1270" alt="Project-CDA-UML" src="https://github.com/user-attachments/assets/0ceea201-a8a6-4ac2-ae89-fe8930db27bc" />
+
+
+
+GDA -UML DIAGRAM
+
+<img width="2082" height="1720" alt="Project GDA-UML" src="https://github.com/user-attachments/assets/055b2178-9510-4462-b5d5-0e41a869b3a3" />
+
+
 
 
 
