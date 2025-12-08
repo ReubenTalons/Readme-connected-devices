@@ -32,6 +32,12 @@ Lab Module 11 focused on implementing cloud integration functionality for the Ga
 
 
 
+<img width="1792" height="1015" alt="UML GDA lab 11" src="https://github.com/user-attachments/assets/3d7f74e6-2e52-414a-8740-7174defb723d" />
+
+
+
+
+
 
 
 
@@ -165,6 +171,7 @@ Summary:
 •	Build Status: SUCCESS 
 
 •	Cloud Integration: VERIFIED 
+
 
 
 
