@@ -58,7 +58,7 @@ communication to Ubidots Cloud, and dashboard visualization
 
 
 SLIDE 3: DEVICE-TO-CLOUD COMMUNICATION
-
+----------------
 
 
 
@@ -120,7 +120,7 @@ MQTT Configuration:
 
 
 SLIDE 4: UBIDOTS CLOUD DASHBOARD
-
+----------------
 
 
 
@@ -171,7 +171,7 @@ Dashboard Status:
 
 
 SLIDE 5: UBIDOTS DEVICE VARIABLES
-
+----------------
 
 
 
@@ -224,7 +224,7 @@ All timestamps show live connection status
 
 
 SLIDE 6: THRESHOLD CONTROL WIDGETS
-
+----------------
 
 
 
@@ -266,7 +266,7 @@ Purpose: Allow manual adjustment of HVAC thresholds from dashboard
 
 
 SLIDE 7: ADAPTIVE THRESHOLD LOGIC
-
+----------------
 
 
 
@@ -316,7 +316,7 @@ detection and dynamic threshold adjustment algorithm
 
 
 SLIDE 8: TECHNICAL IMPLEMENTATION
-
+----------------
 
 
 
@@ -370,7 +370,7 @@ Repository: github.com/ReubenComla/piot-python-components (labmodule12 branch)
 
 
 SLIDE 9: TESTING \& RESULTS
-
+----------------
 
 
 
@@ -435,7 +435,7 @@ Test Results:
 
 
 SLIDE 10: CHALLENGES \& SOLUTIONS
-
+----------------
 
 
 
@@ -511,7 +511,7 @@ real-time data flow.
 
 
 SLIDE 11: PROJECT SUMMARY \& FUTURE WORK
-
+----------------
 
 
 What Was Achieved:
@@ -565,6 +565,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
