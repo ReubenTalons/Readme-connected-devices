@@ -97,43 +97,32 @@ cd ~/piot/cda-python-components
 python3 programmingtheiot/cda/app/ConstrainedDeviceApp.py
 
 What to verify:
-- Configuration loads
-- Sensors initialize
-- No errors
+Configuration loads
+Sensors initialize
+No errors
 
 
 CDA Connection Test
 -------------------
 
 Command:
-# CDA must be running from previous test
-# Look for these lines in terminal output:
+CDA must be running from previous test
+Look for these lines in terminal output:
 grep "Connected to MQTT broker" cda_startup.log
 
-# Or just watch terminal for:
-# "[Callback] Connected to MQTT broker. Result code: 0"
 
-What to verify:
-- Connection successful
-- Result code = 0
+
 
 
 Cloud Connection Test
 ---------------------
 
-Command:
-# CDA must be running
-# Watch terminal for publishing messages every 5 seconds
 
 Expected output:
-- "Published sensor data to topic: /v1.6/devices/constraineddevice001/tempsensor"
-- "Published sensor data to topic: /v1.6/devices/constraineddevice001/humiditysensor"
-- "Published sensor data to topic: /v1.6/devices/constraineddevice001/pressuresensor"
-- "📊 Published HVAC Status: COOLING ACTIVE (value=2)"
-
-What to verify:
-- All sensors publishing
-- No errors
+"Published sensor data to topic: /v1.6/devices/constraineddevice001/tempsensor"
+"Published sensor data to topic: /v1.6/devices/constraineddevice001/humiditysensor"
+"Published sensor data to topic: /v1.6/devices/constraineddevice001/pressuresensor"
+"📊 Published HVAC Status: COOLING ACTIVE (value=2)"
 
 
 Device Connection Test
@@ -148,9 +137,9 @@ Steps:
 6. Check dashboard shows live data updating
 
 What to verify:
-- All variables show "a few seconds ago"
-- Dashboard widgets updating in real-time
-- Temperature chart shows live trend
-- Floor and Ceiling metrics display current values
+All variables show "a few seconds ago"
+Dashboard widgets updating in real-time
+Temperature chart shows live trend
+Floor and Ceiling metrics display current values
 
 
