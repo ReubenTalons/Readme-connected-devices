@@ -1,10 +1,10 @@
-================================================================================
+=============================================
 
 LAB MODULE 12: INTELLIGENT HVAC CONTROL SYSTEM
 
 Text-Based Presentation Document
 
-================================================================================
+==============================================
 
 
 
@@ -16,11 +16,11 @@ Institution: Northeastern University
 
 
 
-================================================================================
+=====================================================
 
 SLIDE 1: TITLE
 
-================================================================================
+==================================================
 
 
 
@@ -72,6 +72,7 @@ Key Components:
 
 
 
+<img width="2385" height="1710" alt="1  System Architecture" src="https://github.com/user-attachments/assets/352736a3-958c-40fa-bfa6-8c7e85c5c353" />
 
 
 \[SCREENSHOT PLACEHOLDER: system\_architecture.png]
@@ -79,6 +80,7 @@ Key Components:
 Description: System architecture diagram showing CDA with sensors, MQTT 
 
 communication to Ubidots Cloud, and dashboard visualization
+
 
 
 
@@ -95,6 +97,14 @@ SLIDE 3: DEVICE-TO-CLOUD COMMUNICATION
 Sensor Data Flow
 
 ----------------
+
+
+<img width="3485" height="1940" alt="2a  CDA_Terminal_Output" src="https://github.com/user-attachments/assets/8c4df46b-e64b-48f7-bd19-f7cc7610a902" />
+
+
+
+
+<img width="2860" height="1767" alt="2b CDA_Terminal_Output" src="https://github.com/user-attachments/assets/219ee1ca-2c0e-4b87-b4f9-1a5453b73ddd" />
 
 
 
@@ -134,6 +144,7 @@ MQTT Configuration:
 
 
 
+
 ================================================================================
 
 SLIDE 4: UBIDOTS CLOUD DASHBOARD
@@ -146,6 +157,16 @@ Dashboard Visualization
 
 -----------------------
 
+
+<img width="3830" height="1647" alt="3a Dashboard_Overview" src="https://github.com/user-attachments/assets/6921b3f5-a296-4666-bd2f-245cf3e1d6ba" />
+
+
+
+<img width="1432" height="1755" alt="3b Sensors" src="https://github.com/user-attachments/assets/204671e0-e451-4fce-b3b0-9084d340d9ff" />
+
+
+
+<img width="3240" height="632" alt="3c  Threshold" src="https://github.com/user-attachments/assets/8a3393c7-84d3-4691-b939-f3d9e626084e" />
 
 
 \[SCREENSHOT PLACEHOLDER: ubidots\_dashboard.png]
@@ -181,6 +202,9 @@ SLIDE 5: UBIDOTS DEVICE VARIABLES
 Device Variables
 
 ----------------
+
+
+<img width="1735" height="1692" alt="4a Variables" src="https://github.com/user-attachments/assets/9035307b-ae69-4694-8364-10d1ec110136" />
 
 
 
@@ -232,6 +256,7 @@ Manual Threshold Controls
 
 -------------------------
 
+<img width="3240" height="632" alt="3c  Threshold" src="https://github.com/user-attachments/assets/f87ecad4-0829-4448-86d3-ed171093500e" />
 
 
 \[SCREENSHOT PLACEHOLDER: threshold\_controls.png]
@@ -373,6 +398,7 @@ System Validation
 -----------------
 
 
+<img width="3330" height="1877" alt="7a  Final code" src="https://github.com/user-attachments/assets/ed5a7619-f363-44c3-a3ea-a3ba90603840" />
 
 \[SCREENSHOT PLACEHOLDER: system\_running.png]
 
@@ -627,4 +653,5 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
