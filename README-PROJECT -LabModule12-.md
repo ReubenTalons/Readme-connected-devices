@@ -17,6 +17,7 @@ Branch: https://github.com/ReubenComla/cda-python-components/tree/labmodule12
 
 UML Design Diagram
 
+<img width="2385" height="1710" alt="Final_UML_lab12" src="https://github.com/user-attachments/assets/1c176f66-6f86-4c32-beaf-5793be53ed26" />
 
 
 
