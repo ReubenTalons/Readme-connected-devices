@@ -72,9 +72,9 @@ Sensor Data Flow
 
 
 
+\
 
-
-
+\
 
 
 <img width="2860" height="1767" alt="2b CDA_Terminal_Output" src="https://github.com/user-attachments/assets/219ee1ca-2c0e-4b87-b4f9-1a5453b73ddd" />
@@ -132,9 +132,10 @@ Dashboard Visualization
 <img width="3830" height="1647" alt="3a Dashboard_Overview" src="https://github.com/user-attachments/assets/6921b3f5-a296-4666-bd2f-245cf3e1d6ba" />
 
 
+\
 
 
-
+\
 
 
 <img width="1432" height="1755" alt="3b Sensors" src="https://github.com/user-attachments/assets/204671e0-e451-4fce-b3b0-9084d340d9ff" />
@@ -565,6 +566,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
