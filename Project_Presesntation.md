@@ -11,9 +11,9 @@
 
 
 
-==========================================
+
 SLIDE 2: SYSTEM OVERVIEW
-==========================================
+
 
 
 
@@ -55,11 +55,11 @@ communication to Ubidots Cloud, and dashboard visualization
 
 
 
-================================================================================
+
 
 SLIDE 3: DEVICE-TO-CLOUD COMMUNICATION
 
-================================================================================
+
 
 
 
@@ -118,11 +118,9 @@ MQTT Configuration:
 
 
 
-================================================================================
 
 SLIDE 4: UBIDOTS CLOUD DASHBOARD
 
-================================================================================
 
 
 
@@ -170,11 +168,11 @@ Dashboard Status:
 
 
 
-================================================================================
+
 
 SLIDE 5: UBIDOTS DEVICE VARIABLES
 
-================================================================================
+
 
 
 
@@ -223,11 +221,11 @@ All timestamps show live connection status
 
 
 
-================================================================================
+
 
 SLIDE 6: THRESHOLD CONTROL WIDGETS
 
-================================================================================
+
 
 
 
@@ -266,11 +264,10 @@ Purpose: Allow manual adjustment of HVAC thresholds from dashboard
 
 
 
-================================================================================
 
 SLIDE 7: ADAPTIVE THRESHOLD LOGIC
 
-================================================================================
+
 
 
 
@@ -317,11 +314,10 @@ detection and dynamic threshold adjustment algorithm
 
 
 
-================================================================================
 
 SLIDE 8: TECHNICAL IMPLEMENTATION
 
-================================================================================
+
 
 
 
@@ -371,11 +367,11 @@ Repository: github.com/ReubenComla/piot-python-components (labmodule12 branch)
 
 
 
-================================================================================
+
 
 SLIDE 9: TESTING \& RESULTS
 
-================================================================================
+
 
 
 
@@ -436,11 +432,11 @@ Test Results:
 
 
 
-================================================================================
+
 
 SLIDE 10: CHALLENGES \& SOLUTIONS
 
-================================================================================
+
 
 
 
@@ -514,11 +510,7 @@ real-time data flow.
 
 
 
-================================================================================
-
 SLIDE 11: PROJECT SUMMARY \& FUTURE WORK
-
-================================================================================
 
 
 
@@ -573,73 +565,6 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
-
-
-
-
-
-================================================================================
-
-SCREENSHOT PLACEHOLDERS SUMMARY
-
-================================================================================
-
-
-
-You need to insert these 6 screenshots:
-
-
-
-1\. \[system\_architecture.png] - Slide 2
-
-&nbsp;  Show: System diagram with CDA, MQTT, Ubidots Cloud
-
-
-
-2\. \[cda\_terminal\_output.png] - Slide 3
-
-&nbsp;  Show: Terminal with MQTT connection and sensor publishing messages
-
-
-
-3\. \[ubidots\_dashboard.png] - Slide 4
-
-&nbsp;  Show: Full dashboard with all widgets (sensors + controls)
-
-
-
-4\. \[ubidots\_variables.png] - Slide 5
-
-&nbsp;  Show: Device page listing all 8 variables with live timestamps
-
-
-
-5\. \[threshold\_controls.png] - Slide 6
-
-&nbsp;  Show: Floor/Ceiling sliders and metric displays
-
-
-
-6\. \[adaptive\_threshold\_code.png] - Slide 7
-
-&nbsp;  Show: Code snippet of \_handleThresholdUpdate method
-
-
-
-7\. \[system\_running.png] - Slide 9
-
-&nbsp;  Show: Split screen - terminal + dashboard both showing live data
-
-
-
-
-
-================================================================================
-
-END OF PRESENTATION
-
-================================================================================
-
 
 
 
