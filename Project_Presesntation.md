@@ -1,40 +1,11 @@
-=============================================
+==========================================================================================
+                        LAB MODULE 12: INTELLIGENT HVAC CONTROL SYSTEM
+==========================================================================================
 
-LAB MODULE 12: INTELLIGENT HVAC CONTROL SYSTEM
-
-Text-Based Presentation Document
-
-==============================================
+                      IoT-Based Temperature Management with Adaptive Thresholds
 
 
 
-Student: Reuben Comla
-
-Course: INFO7374 - Programming the Internet of Things
-
-Institution: Northeastern University
-
-
-
-=====================================================
-
-SLIDE 1: TITLE
-
-==================================================
-
-
-
-Lab 12: Intelligent HVAC Control System
-
-IoT-Based Temperature Management with Adaptive Thresholds
-
-
-
-Reuben Comla
-
-INFO7374 - Programming the Internet of Things
-
-Northeastern University
 
 
 
@@ -670,6 +641,7 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
 
 
