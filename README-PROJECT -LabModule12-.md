@@ -86,30 +86,71 @@ Confirmed device last activity: live connection
 Result: ✅ PASS
 
 
-Test Commands
+LAB MODULE 12 - TEST COMMANDS
+=============================
+
 CDA Restart Test
-bashcd ~/piot/cda-python-components
+----------------
+
+Command:
+cd ~/piot/cda-python-components
 python3 programmingtheiot/cda/app/ConstrainedDeviceApp.py
-What to verify: Configuration loads, sensors initialize, no errors
+
+What to verify:
+- Configuration loads
+- Sensors initialize
+- No errors
+
 
 CDA Connection Test
-bash# CDA must be running from previous test
+-------------------
+
+Command:
+# CDA must be running from previous test
 # Look for these lines in terminal output:
 grep "Connected to MQTT broker" cda_startup.log
-# Or just watch terminal for: "[Callback] Connected to MQTT broker. Result code: 0"
-What to verify: Connection successful, Result code = 0
+
+# Or just watch terminal for:
+# "[Callback] Connected to MQTT broker. Result code: 0"
+
+What to verify:
+- Connection successful
+- Result code = 0
+
 
 Cloud Connection Test
-bash# CDA must be running
-# Watch terminal for publishing messages every 5 seconds:
-# "Published sensor data to topic: /v1.6/devices/constraineddevice001/tempsensor"
-# "Published sensor data to topic: /v1.6/devices/constraineddevice001/humiditysensor"
-# "Published sensor data to topic: /v1.6/devices/constraineddevice001/pressuresensor"
-# "📊 Published HVAC Status: COOLING ACTIVE (value=2)"
-What to verify: All sensors publishing, no errors
+---------------------
+
+Command:
+# CDA must be running
+# Watch terminal for publishing messages every 5 seconds
+
+Expected output:
+- "Published sensor data to topic: /v1.6/devices/constraineddevice001/tempsensor"
+- "Published sensor data to topic: /v1.6/devices/constraineddevice001/humiditysensor"
+- "Published sensor data to topic: /v1.6/devices/constraineddevice001/pressuresensor"
+- "📊 Published HVAC Status: COOLING ACTIVE (value=2)"
+
+What to verify:
+- All sensors publishing
+- No errors
+
 
 Device Connection Test
-bash# In browser: Go to Ubidots → Devices → constraineddevice001
-# Check all 8 variables show recent timestamps
-# Check dashboard shows live data updating
-What to verify: All variables show "a few seconds ago", dashboard widgets update
+----------------------
+
+Steps:
+1. Open browser
+2. Go to Ubidots website
+3. Navigate to: Devices → constraineddevice001
+4. Check all 8 variables show recent timestamps
+5. Go to dashboard
+6. Check dashboard shows live data updating
+
+What to verify:
+- All variables show "a few seconds ago"
+- Dashboard widgets updating in real-time
+- Temperature chart shows live trend
+- Floor and Ceiling metrics display current values
+
+
