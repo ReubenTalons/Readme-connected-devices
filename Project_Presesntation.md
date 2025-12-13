@@ -44,7 +44,7 @@ Key Components:
 <img width="2385" height="1710" alt="1  System Architecture" src="https://github.com/user-attachments/assets/352736a3-958c-40fa-bfa6-8c7e85c5c353" />
 
 
-\[SCREENSHOT PLACEHOLDER: system\_architecture.png]
+
 
 Description: System architecture diagram showing CDA with sensors, MQTT 
 
@@ -81,7 +81,7 @@ Sensor Data Flow
 
 
 
-\[SCREENSHOT PLACEHOLDER: cda\_terminal\_output.png]
+
 
 Description: CDA Terminal showing successful MQTT connection (Result code: 0) 
 
@@ -146,7 +146,7 @@ Dashboard Visualization
 
 
 
-\[SCREENSHOT PLACEHOLDER: ubidots\_dashboard.png]
+
 
 Description: Full dashboard showing Temperature, Humidity, and Pressure widgets
 
@@ -185,7 +185,7 @@ Device Variables
 
 
 
-\[SCREENSHOT PLACEHOLDER: ubidots\_variables.png]
+
 
 Description: Device page showing 8 variables with 'a few seconds ago' 
 
@@ -236,7 +236,7 @@ Manual Threshold Controls
 <img width="3240" height="632" alt="3c  Threshold" src="https://github.com/user-attachments/assets/f87ecad4-0829-4448-86d3-ed171093500e" />
 
 
-\[SCREENSHOT PLACEHOLDER: threshold\_controls.png]
+
 
 Description: Dashboard showing Floor and Ceiling control sliders and metric 
 
@@ -304,7 +304,7 @@ Adaptive Behavior Implemented in CDA:
 
 
 
-\[SCREENSHOT PLACEHOLDER: adaptive\_threshold\_code.png]
+
 
 Description: Code snippet showing \_handleThresholdUpdate method with chatter 
 
@@ -382,7 +382,7 @@ System Validation
 
 <img width="3330" height="1877" alt="7a  Final code" src="https://github.com/user-attachments/assets/ed5a7619-f363-44c3-a3ea-a3ba90603840" />
 
-\[SCREENSHOT PLACEHOLDER: system\_running.png]
+
 
 Description: Split-screen showing CDA terminal with live sensor data publishing
 
@@ -565,6 +565,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
