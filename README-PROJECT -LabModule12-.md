@@ -1,396 +1,114 @@
-# https://stem.ubidots.com/app/dashboards/
+Intelligent HVAC Control System with Adaptive Thresholds
+(Connected Devices) - Lab Module 12
 
-# 
 
-# IoT Project Proposal: Intelligent HVAC Control System with Adaptive Thresholds
+Description
 
+Lab Module 12 focused on implementing an Intelligent HVAC Control System with Adaptive Thresholds. This capstone module involved integrating the Constrained Device Application (CDA) with Ubidots cloud platform using MQTT protocol, implementing real-time sensor data publishing (temperature, humidity, pressure), creating cloud-to-device communication infrastructure for actuator control, developing adaptive threshold management logic to prevent actuator chatter, and building a comprehensive dashboard for monitoring and manual control of HVAC thresholds. The system demonstrates distributed intelligence with edge-based decision making and cloud-based visualization.
 
 
-Student: Reuben
 
-Course: INFO7374 - Programming the Internet of Things
+Code Repository and Branch
 
-Institution: Northeastern University
+URL: https://github.com/ReubenComla/cda-python-components
 
-Date: December 6, 2025
+Branch: https://github.com/ReubenComla/cda-python-components/tree/labmodule12
 
 
+UML Design Diagram
 
-## 1\. WHAT – Problem Statement
 
-Traditional HVAC control systems use fixed temperature thresholds, causing frequent on/off cycling when temperatures hover near threshold values. This "actuator chatter" wastes energy (30-40% inefficiency), increases equipment wear, and provides poor comfort. Current IoT monitoring systems also lack secure communication, exposing building systems to cyber attacks.
 
-The Problem: We need an intelligent IoT system that combines immediate reactive control with adaptive threshold management, while ensuring all communication is encrypted and secure. The system must use both MQTT and CoAP protocols efficiently to demonstrate protocol selection strategies for different use cases.
 
 
+Tests Executed
 
-## 2\. WHY – Purpose
+Integration Tests
+CDA Restart Test
 
-##### Why I Care:
+Started CDA application: python3 programmingtheiot/cda/app/ConstrainedDeviceApp.py
+Verified configuration loaded from PiotConfig.props
+Confirmed sensor adapters initialized (Temperature, Humidity, Pressure)
+Validated system performance manager started
+Verified scheduler jobs added for 5-second telemetry intervals
+Confirmed clean startup with no errors
+Validated exit code 0 on shutdown
 
-As a cybersecurity professional and Graduate Teaching Assistant for Cybersecure Audit \& Compliance at Northeastern University, I've seen how IoT systems are both powerful and vulnerable. This project lets me combine my security expertise with IoT programming to build a system that is both intelligent and secure—demonstrating best practices that are often missing in real-world deployments.
+Result: ✅ PASS
+CDA Connection Test
 
+Verified MQTT client initialization with Ubidots credentials
+Confirmed MQTT authentication enabled
+Validated client ID: constraineddevice001
+Tested connection to broker: things.ubidots.com:1883
+Verified callback: "[Callback] Connected to MQTT broker. Result code: 0"
+Confirmed subscriptions established to control topics
+Validated keep-alive: 60 seconds
 
+Result: ✅ PASS
+Cloud Connection Test
 
-##### Why You Should Care:
+Tested sensor data publishing to Ubidots cloud
+Verified topics:
 
+/v1.6/devices/constraineddevice001/tempsensor
+/v1.6/devices/constraineddevice001/humiditysensor
+/v1.6/devices/constraineddevice001/pressuresensor
 
 
-* Energy Savings: Adaptive threshold management reduces HVAC energy consumption by 30-40%
+Confirmed JSON payload format: {"value": <sensor_value>}
+Validated MQTT QoS 0 transmission
+Tested HVAC status publishing to hvac_status topic
+Verified zero packet loss
+Confirmed continuous 5-second publishing interval
 
+Result: ✅ PASS
+Device Connection Test
 
+Verified Ubidots device: constraineddevice001 created
+Confirmed 8 variables active:
 
-* Security Critical: IoT attacks increased 300% in 2024; this demonstrates proper TLS encryption and certificate management
+tempsensor (live updates)
+humiditysensor (live updates)
+pressuresensor (live updates)
+systemperfmsg (CPU/Memory metrics)
+threshold_floor (threshold display)
+threshold_ceiling (threshold display)
+threshold_events (change log)
+hvac_status (operational state)
 
 
+Validated timestamps showing "a few seconds ago"
+Tested dashboard widgets displaying real-time data
+Confirmed device last activity: live connection
 
-* Real-World Application: This architecture applies to smart buildings, hospitals, data centers, greenhouses—anywhere environmental monitoring is critical
+Result: ✅ PASS
 
 
+Test Commands
+CDA Restart Test
+bashcd ~/piot/cda-python-components
+python3 programmingtheiot/cda/app/ConstrainedDeviceApp.py
+What to verify: Configuration loads, sensors initialize, no errors
 
-* Scalability: Distributed edge intelligence reduces cloud costs and enables offline operation
+CDA Connection Test
+bash# CDA must be running from previous test
+# Look for these lines in terminal output:
+grep "Connected to MQTT broker" cda_startup.log
+# Or just watch terminal for: "[Callback] Connected to MQTT broker. Result code: 0"
+What to verify: Connection successful, Result code = 0
 
-
-
-
-
-### 3\. HOW – System Diagram and Approach
-
-#### System Architecture
-
-
-
-
-
-
-
-..........................................
-
-.........................................
-
-
-
-#### Technology Stack
-
-......................................
-
-.....................................
-
-
-
-
-
-
-
-
-
-## How It Works
-
-
-
-##### Step 1: Sensor Monitoring (CDA)
-
-
-
-* Read temperature every 5 seconds
-
-
-
-* Compare against thresholds (Floor: 20°C, Ceiling: 24°C)
-
-
-
-* If violated, trigger appropriate actuator
-
-
-
-#### Step 2: Communication
-
-
-
-* CDA publishes sensor data via MQTT QoS 1 (reliable delivery)
-
-
-
-* CDA subscribes to actuator commands via MQTT QoS 2 (guaranteed delivery)
-
-
-
-* Alternative: Use CoAP for lightweight communication
-
-
-
-#### Step 3: Trend Analysis (GDA)
-
-
-
-* GDA subscribes to all sensor messages
-
-
-
-* Tracks threshold crossings over time
-
-
-
-* If >5 crossings in 10 minutes → trigger adaptive response
-
-
-
-
-
-#### Step 4: Adaptive Control
-
-
-
-* GDA calculates optimal threshold adjustment
-
-
-
-* Sends UPDATE\_THRESHOLD command to CDA
-
-
-
-* CDA applies new thresholds
-
-
-
-* System stabilizes with fewer false triggers
-
-
-
-#### Step 5: Security
-
-
-
-* All MQTT communication encrypted with TLS 1.2
-
-
-
-* Certificates validated on each connection
-
-
-
-* Wireshark shows encrypted packets (unreadable without cert)
-
-
-
-
-
-## 4\. RESULTS – Expected Outcomes
-
-## What We Will Demonstrate
-
-
-
-#### 1\. Real-Time Intelligent Control
-
-
-
-* Live temperature monitoring on dashboard
-
-
-
-* Automatic HVAC activation when thresholds crossed
-
-
-
-* System responds in <100ms from sensor to actuator
-
-
-
-* Visual indicators show system state (LED colors)
-
-#### 
-
-#### 2\. Adaptive Threshold Management
-
-
-
-* Simulate 6 temperature fluctuations near threshold
-
-
-
-* GDA detects pattern and adjusts thresholds automatically
-
-
-
-* System reduces actuator cycling by 50-70%
-
-
-
-* Dashboard displays threshold adjustment events
-
-
-
-### 3\. Secure Communication
-
-
-
-* All messages encrypted with TLS
-
-
-
-* Wireshark packet capture showing encrypted traffic
-
-
-
-* Certificate validation demonstrated
-
-
-
-* 100% secure message delivery
-
-
-
-
-
-### 4\. Protocol Performance Comparison
-
-#### Based on completed testing with 10,000 messages:
-
-#### MQTT Performance:
-
-
-
-* QoS 0: 750ms (fastest)
-
-
-
-* QoS 1: 2,627ms (reliable)
-
-
-
-* QoS 2: 4,123ms (guaranteed)
-
-
-
-* TLS adds 18-155% overhead
-
-
-
-#### CoAP Performance:
-
-
-
-* NON: 60ms for 10 requests (~6ms each) - 313x faster than CON
-
-
-
-* CON: 18,866ms for 10 requests (~1,887ms each)
-
-
-
-Key Result: Protocol choice matters! Use QoS 0/CoAP NON for frequent updates, QoS 2/CoAP CON for critical commands.
-
-#### 
-
-#### Quantifiable Results
-
-
-
-..................................................
-
-..........................................................
-
-
-
-
-
-### Deliverables
-
-
-
-* Working CDA with sensor integration and actuator control
-
-
-
-* Working GDA with trend analysis and adaptive commands
-
-
-
-* Configured Mosquitto broker with TLS encryption
-
-
-
-* Performance test results (MQTT QoS 0/1/2, CoAP CON/NON)
-
-
-
-* Security validation (TLS certificates, Wireshark analysis)
-
-
-
-* Live dashboard showing real-time data and adaptive events
-
-
-
-* Complete demonstration (90 minutes)
-
-
-
-
-
-### Demonstration Timeline
-
-
-
-.............................
-
-..........................................
-
-
-
-
-
-
-
-
-
-### Conclusion
-
-#### This project implements an intelligent, secure IoT system that demonstrates:
-
-
-
-* Edge intelligence for immediate control (<100ms response)
-
-
-
-* Gateway analytics for adaptive optimization (50-70% efficiency gain)
-
-
-
-* Secure messaging with TLS encryption (100% encrypted communication)
-
-
-
-* Protocol expertise showing when to use MQTT vs CoAP, QoS 0 vs QoS 2
-
-
-
-
-
-Through rigorous testing with 10,000+ messages, we've proven that distributed intelligence (edge + gateway) creates smarter, more efficient IoT systems. The architecture is scalable, secure, and directly applicable to real-world smart building and industrial monitoring deployments.
-
-Bottom Line: This isn't just a lab exercise—it's a production-ready architecture demonstrating best practices for secure, intelligent IoT system design.
-
-
-
-
-
-Today: Full System Test 🎯
-
-We're going to:
-
-
-
-Start GDA (Terminal 1)
-
-Start CDA (Terminal 2)
-
-Watch the adaptive thresholds work in real-time
-
-Monitor the Ubidots dashboard
-
-
-
+Cloud Connection Test
+bash# CDA must be running
+# Watch terminal for publishing messages every 5 seconds:
+# "Published sensor data to topic: /v1.6/devices/constraineddevice001/tempsensor"
+# "Published sensor data to topic: /v1.6/devices/constraineddevice001/humiditysensor"
+# "Published sensor data to topic: /v1.6/devices/constraineddevice001/pressuresensor"
+# "📊 Published HVAC Status: COOLING ACTIVE (value=2)"
+What to verify: All sensors publishing, no errors
+
+Device Connection Test
+bash# In browser: Go to Ubidots → Devices → constraineddevice001
+# Check all 8 variables show recent timestamps
+# Check dashboard shows live data updating
+What to verify: All variables show "a few seconds ago", dashboard widgets update
