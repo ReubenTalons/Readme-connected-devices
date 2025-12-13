@@ -77,13 +77,13 @@ Sensor Data Flow
 
 
 
-\<img width="2860" height="1767" alt="2b CDA_Terminal_Output" src="https://github.com/user-attachments/assets/219ee1ca-2c0e-4b87-b4f9-1a5453b73ddd" />
+<img width="2860" height="1767" alt="2b CDA_Terminal_Output" src="https://github.com/user-attachments/assets/219ee1ca-2c0e-4b87-b4f9-1a5453b73ddd" />
 
 
 
 
 
-\Description: CDA Terminal showing successful MQTT connection (Result code: 0) 
+Description: CDA Terminal showing successful MQTT connection (Result code: 0) 
 
 and sensor data publishing every 5 seconds
 
@@ -566,6 +566,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
