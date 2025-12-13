@@ -104,6 +104,10 @@ Sensor Data Flow
 
 
 
+
+
+
+
 <img width="2860" height="1767" alt="2b CDA_Terminal_Output" src="https://github.com/user-attachments/assets/219ee1ca-2c0e-4b87-b4f9-1a5453b73ddd" />
 
 
@@ -162,11 +166,17 @@ Dashboard Visualization
 
 
 
+
+
+
+
 <img width="1432" height="1755" alt="3b Sensors" src="https://github.com/user-attachments/assets/204671e0-e451-4fce-b3b0-9084d340d9ff" />
 
 
 
 <img width="3240" height="632" alt="3c  Threshold" src="https://github.com/user-attachments/assets/8a3393c7-84d3-4691-b939-f3d9e626084e" />
+
+
 
 
 \[SCREENSHOT PLACEHOLDER: ubidots\_dashboard.png]
@@ -304,8 +314,6 @@ Intelligent Temperature Management
 
 
 
-
-<img width="1735" height="1692" alt="4a Variables" src="https://github.com/user-attachments/assets/cf4bdfbb-4aca-4de6-bdf6-1dd4ffd386d3" />
 
 
 Initial HVAC Thresholds: 18°C (Floor) - 20°C (Ceiling)
@@ -660,6 +668,7 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
 
 
