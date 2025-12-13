@@ -1,6 +1,6 @@
-==========================================================================================
+
                         LAB MODULE 12: INTELLIGENT HVAC CONTROL SYSTEM
-==========================================================================================
+
 
                       IoT-Based Temperature Management with Adaptive Thresholds
 
@@ -641,6 +641,7 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
 
 
