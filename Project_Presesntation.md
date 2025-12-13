@@ -13,7 +13,7 @@
 
 
 SLIDE 2: SYSTEM OVERVIEW
-
+------------
 
 
 
@@ -565,6 +565,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
