@@ -300,6 +300,13 @@ Intelligent Temperature Management
 -----------------------------------
 
 
+<img width="1570" height="690" alt="5aFloor CeilingSlider" src="https://github.com/user-attachments/assets/8b2f940f-5533-4099-881b-aba31346b7e9" />
+
+
+
+
+<img width="1735" height="1692" alt="4a Variables" src="https://github.com/user-attachments/assets/cf4bdfbb-4aca-4de6-bdf6-1dd4ffd386d3" />
+
 
 Initial HVAC Thresholds: 18°C (Floor) - 20°C (Ceiling)
 
@@ -653,5 +660,6 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
 
