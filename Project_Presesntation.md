@@ -315,6 +315,8 @@ Intelligent Temperature Management
 
 
 
+<img width="3265" height="550" alt="3d sytemClock" src="https://github.com/user-attachments/assets/42de41d6-eaaf-4452-a634-ebb6dfad76f9" />
+
 
 Initial HVAC Thresholds: 18°C (Floor) - 20°C (Ceiling)
 
@@ -668,6 +670,7 @@ You need to insert these 6 screenshots:
 END OF PRESENTATION
 
 ================================================================================
+
 
 
 
