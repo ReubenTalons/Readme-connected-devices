@@ -12,7 +12,7 @@
 
 
 
-SLIDE 2: SYSTEM OVERVIEW
+SYSTEM OVERVIEW
 ------------
 
 
@@ -57,7 +57,7 @@ communication to Ubidots Cloud, and dashboard visualization
 
 
 
-SLIDE 3: DEVICE-TO-CLOUD COMMUNICATION
+DEVICE-TO-CLOUD COMMUNICATION
 ----------------
 
 
@@ -119,7 +119,7 @@ MQTT Configuration:
 
 
 
-SLIDE 4: UBIDOTS CLOUD DASHBOARD
+UBIDOTS CLOUD DASHBOARD
 ----------------
 
 
@@ -135,10 +135,13 @@ Dashboard Visualization
 \
 
 
-\
+
+
 
 
 <img width="1432" height="1755" alt="3b Sensors" src="https://github.com/user-attachments/assets/204671e0-e451-4fce-b3b0-9084d340d9ff" />
+
+\
 
 
 
@@ -171,7 +174,9 @@ Dashboard Status:
 
 
 
-SLIDE 5: UBIDOTS DEVICE VARIABLES
+
+
+UBIDOTS DEVICE VARIABLES
 ----------------
 
 
@@ -224,7 +229,9 @@ All timestamps show live connection status
 
 
 
-SLIDE 6: THRESHOLD CONTROL WIDGETS
+
+
+THRESHOLD CONTROL WIDGETS
 ----------------
 
 
@@ -266,7 +273,10 @@ Purpose: Allow manual adjustment of HVAC thresholds from dashboard
 
 
 
-SLIDE 7: ADAPTIVE THRESHOLD LOGIC
+
+
+
+ADAPTIVE THRESHOLD LOGIC
 ----------------
 
 
@@ -280,7 +290,9 @@ Intelligent Temperature Management
 <img width="1570" height="690" alt="5aFloor CeilingSlider" src="https://github.com/user-attachments/assets/8b2f940f-5533-4099-881b-aba31346b7e9" />
 
 
+\
 
+\
 
 <img width="3265" height="550" alt="3d sytemClock" src="https://github.com/user-attachments/assets/42de41d6-eaaf-4452-a634-ebb6dfad76f9" />
 
@@ -316,7 +328,9 @@ detection and dynamic threshold adjustment algorithm
 
 
 
-SLIDE 8: TECHNICAL IMPLEMENTATION
+
+
+TECHNICAL IMPLEMENTATION
 ----------------
 
 
@@ -370,7 +384,7 @@ Repository: github.com/ReubenComla/piot-python-components (labmodule12 branch)
 
 
 
-SLIDE 9: TESTING \& RESULTS
+TESTING \& RESULTS
 ----------------
 
 
@@ -397,6 +411,8 @@ Test Results:
 
 
 
+
+
 ✓ Device-to-Cloud Success:
 
 &nbsp; - MQTT connected (Result code: 0)
@@ -409,6 +425,8 @@ Test Results:
 
 
 
+
+
 ✓ Cloud Integration Complete:
 
 &nbsp; - 8 Ubidots variables created
@@ -416,6 +434,8 @@ Test Results:
 &nbsp; - Dashboard widgets configured
 
 &nbsp; - Real-time visualization working
+
+
 
 
 
@@ -435,13 +455,15 @@ Test Results:
 
 
 
-SLIDE 10: CHALLENGES \& SOLUTIONS
+
+
+CHALLENGES \& SOLUTIONS
 ----------------
 
 
 
 
-Challenge 1: Topic Parameter Mismatch
+Topic Parameter Mismatch
 
 --------------------------------------
 
@@ -461,7 +483,9 @@ cloud topics
 
 
 
-Challenge 2: Missing Actuator Response Publishing
+
+
+Missing Actuator Response Publishing
 
 --------------------------------------------------
 
@@ -479,7 +503,9 @@ formatting, error handling, and proper topic routing to Ubidots
 
 
 
-Challenge 3: Subscription Topic Format for Cloud Commands
+
+
+Subscription Topic Format for Cloud Commands
 
 ----------------------------------------------------------
 
@@ -497,6 +523,7 @@ to match Ubidots command topic format
 
 
 
+
 Key Takeaway:
 
 -------------
@@ -506,6 +533,8 @@ Cloud platform integration requires careful API specification study. Systematic
 testing and iterative debugging identified issues early, leading to successful
 
 real-time data flow.
+
+
 
 
 
@@ -553,6 +582,8 @@ Actual Results:
 
 
 
+
+
 Potential Enhancements:
 
 -----------------------
@@ -566,6 +597,7 @@ Potential Enhancements:
 \- Historical Analytics: Long-term trend analysis and energy optimization 
 
 &nbsp; reporting
+
 
 
 
